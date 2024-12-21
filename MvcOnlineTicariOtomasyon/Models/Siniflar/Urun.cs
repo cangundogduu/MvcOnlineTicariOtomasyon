@@ -23,11 +23,12 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public decimal AlisFiyat { get; set; }
         public decimal SatisFiyat { get; set; }
         public bool Durum { get; set; }
+        public int KategoriId { get; set; }
 
         [Column(TypeName = "Varchar")]
         [StringLength(250)]
         public string UrunGorsel { get; set; }
-        public Kategori Kategori { get; set; }
+        public virtual Kategori Kategori { get; set; }
 
         public ICollection<SatisHareket>  SatisHarekets{ get; set; }
 

@@ -4,6 +4,8 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<br />
+<h2>Kategori Listesi</h2>
 <table class="table table-bordered">
     <tr>
         <th>ID</th>
@@ -13,7 +15,7 @@
     </tr>
     @foreach(var item in Model) {
     <tr>
-        <td>@item.KategoriId</td>
+        <th>@item.KategoriId</th>
         <td>@item.KategoriAd</td>
         <td><a href="/Kategori/KategoriSil/@item.KategoriId" class="btn btn-danger">Sil</a></td>
         <td><a href="/Kategori/KategoriGetir/@item.KategoriId" class="btn btn-success">Güncelle</a></td>
